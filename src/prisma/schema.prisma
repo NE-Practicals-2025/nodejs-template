@@ -24,6 +24,7 @@ enum VerificationStatus {
 
 enum PasswordResetStatus {
     PENDING
+    VERIFIED
     IDLE
 
     @@map("password_reset_status")

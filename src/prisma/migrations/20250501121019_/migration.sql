@@ -5,7 +5,7 @@ CREATE TYPE "roles" AS ENUM ('ADMIN', 'USER');
 CREATE TYPE "verification_status" AS ENUM ('VERIFIED', 'PENDING', 'UNVERIFIED');
 
 -- CreateEnum
-CREATE TYPE "password_reset_status" AS ENUM ('PENDING', 'IDLE');
+CREATE TYPE "password_reset_status" AS ENUM ('PENDING', 'VERIFIED', 'IDLE');
 
 -- CreateTable
 CREATE TABLE "users" (
