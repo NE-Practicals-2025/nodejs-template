@@ -41,3 +41,14 @@ export class ResetPasswordDTO {
     code: string;
 
 }
+
+export class VerifyCodeDTO {
+
+    @IsString()
+    @IsNotEmpty()
+    code: string;
+
+    @IsEmail()
+    @IsNotEmpty()
+    email: string;
+}
