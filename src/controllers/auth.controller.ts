@@ -53,7 +53,7 @@ const resetPassword = async (req: Request, res: Response) => {
             where: { email }
         })
         if (!user) return ServerResponse.error(res, "Invalid email")
-        if (user.passwordResetStatus !== "VERIFIED") return ServerResponse.error(res, "Invalid or expired code")
+        if (user.passwordResetStatus !== "VERIFIED") return ServerResponse.error(res, "Verify code first!")
         const hashedPassword = await hash(password, 10)
         await prisma.user.update({
             where: { id: user.id },

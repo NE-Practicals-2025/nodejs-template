@@ -38,7 +38,7 @@ export class ResetPasswordDTO {
 
     @IsString()
     @IsNotEmpty()
-    code: string;
+    email: string;
 
 }
 
